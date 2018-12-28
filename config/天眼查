@@ -1,0 +1,40 @@
+{
+	"url" : "https://www.tianyancha.com/search",
+	"type" : "text",
+	"from" : "1",
+	"to" : "2",
+	"charset" : "utf8",
+	"saveDir" : "e:/tianyan",
+	"rule" :{
+       "company": {
+        "base": "content",
+        "mode": "css",
+        "expression": ".result-list>div:nth-child(1) .header>a",
+        "pick": "text",
+        "index": 1
+      },
+      "legalPerson": {
+        "base": "content",
+        "mode": "css",
+        "expression": ".result-list>div:nth-child(1) .info .legalPersonName",
+        "pick": "text",
+        "index": 1
+      },
+      "phone": {
+        "base": "content",
+        "mode": "css",
+        "expression": ".result-list>div:nth-child(1) .contact>div:nth-child(1)>span:nth-child(2)",
+        "pick": "text",
+        "index": 1
+      },
+      "email": {
+        "base": "content",
+        "mode": "css",
+        "expression": ".result-list>div:nth-child(1) .contact>div:nth-child(2)>span:nth-child(2)",
+        "pick": "text",
+        "index": 1
+      }
+    },
+	"isPagination" : 1,
+	"mode" : "web"
+}
